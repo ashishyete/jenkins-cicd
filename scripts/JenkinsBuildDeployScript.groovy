@@ -10,7 +10,7 @@ pipeline {
 
         choice(
                 name: 'BRANCH_NAME',
-                choices: ['main', 'develop', 'release'],
+                choices: ['main', 'develop', 'release','master'],
                 description: 'Select branch to build'
         )
     }
