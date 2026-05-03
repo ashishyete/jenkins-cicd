@@ -19,7 +19,6 @@ pipeline {
         GIT_ORG = "ashishyete"
         // Docker settings
         PORT = "8080"
-        PATH = "/usr/bin:/bin:/usr/local/bin:$PATH"
     }
 
     stages {
@@ -40,9 +39,7 @@ pipeline {
             steps {
                 echo "Building Spring Boot application using Maven..."
 
-                sh """
-                    mvn clean package -DskipTests
-                """
+                sh "/usr/bin/mvn clean package -DskipTests"
             }
         }
 
