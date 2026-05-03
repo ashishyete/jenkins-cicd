@@ -1,20 +1,6 @@
 pipeline {
     agent any
 
-    parameters {
-        choice(
-                name: 'REPO_NAME',
-                choices: ['springboot-app', 'order-service', 'user-service'],
-                description: 'Select GitHub repository'
-        )
-
-        choice(
-                name: 'BRANCH_NAME',
-                choices: ['main', 'develop', 'release','master'],
-                description: 'Select branch to build'
-        )
-    }
-
     environment {
         GIT_ORG = "ashishyete"
         // Docker settings
