@@ -19,6 +19,7 @@ pipeline {
         GIT_ORG = "ashishyete"
         // Docker settings
         PORT = "8080"
+        PATH = "/usr/bin:/bin:/usr/local/bin:$PATH"
     }
 
     stages {
