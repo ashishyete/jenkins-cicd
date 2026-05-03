@@ -25,11 +25,11 @@ pipeline {
             steps {
                 echo "Building Spring Boot application using Maven..."
 
-                sh "/usr/bin/mvn clean package -DskipTests"
+                sh "clean package -DskipTests"
             }
         }
 
-       /* stage('Build Docker Image') {
+        stage('Build Docker Image') {
             steps {
                 script {
                     env.IMAGE_NAME = "${params.REPO_NAME}:${params.BRANCH_NAME}-${BUILD_NUMBER}"
@@ -42,7 +42,7 @@ pipeline {
                 """
             }
         }
-
+/*
         stage('Stop Old Container') {
             steps {
                 script {
