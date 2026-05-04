@@ -42,7 +42,7 @@ pipeline {
                 """
             }
         }
-/*
+
         stage('Stop Old Container') {
             steps {
                 script {
@@ -75,7 +75,7 @@ pipeline {
     post {
         success {
             echo "======================================"
-            echo "Deployment SUCCESS 🚀"
+            echo "Deployment SUCCESS"
             echo "App: ${params.REPO_NAME}"
             echo "Branch: ${params.BRANCH_NAME}"
             echo "Image: ${IMAGE_NAME}"
@@ -84,13 +84,13 @@ pipeline {
 
         failure {
             echo "======================================"
-            echo "Deployment FAILED ❌"
+            echo "Deployment FAILED"
             echo "Check logs above"
             echo "======================================"
         }
 
         always {
             echo "Pipeline execution completed"
-        }*/
+        }
     }
 }
