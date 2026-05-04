@@ -4,7 +4,7 @@ pipeline {
     environment {
         GIT_ORG = "ashishyete"
         // Docker settings
-        PORT = "8080"
+        PORT = "9000"
     }
 
     stages {
