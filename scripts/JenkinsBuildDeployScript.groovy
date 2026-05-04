@@ -65,7 +65,7 @@ pipeline {
                 sh """
                     docker run -d \
                     --name ${CONTAINER_NAME} \
-                    -p ${PORT}:8080 \
+                    -p ${PORT}:9000 \
                     ${IMAGE_NAME}
                 """
             }
